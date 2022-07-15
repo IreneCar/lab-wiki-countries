@@ -3,20 +3,18 @@ import countries from '../countries.json';
 
 function CountriesList() {
   return (
-    // Bootstrap container wrapper div
-    <div class="container">
-      {/* Bootstrap row wrapper div  */}
-      <div class="row">
+   
         {/* Countries List (Bootstrap column)  */}
-        <div class="col-5" style="max-height: 90vh; overflow: scroll">
+        <div class="col-5" style={{maxHeight: '90vh', overflowY: 'scroll'}}>
           <div class="list-group">
-            {countries.map(() => {
-              <Link to="/">{countries.alpha3Code}</Link>;
+            {countries.map((country) => {
+              <Link to={`/${country.alpha3Code}`}>
+                <h5>{country.name.common}</h5>
+              </Link>;
             })}
           </div>
         </div>
-      </div>
-    </div>
+     
   );
 }
 

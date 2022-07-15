@@ -8,9 +8,13 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<CountriesList />} />
-      </Routes>
+      {/* Bootstrap container wrapper div */}
+      <div class="container">
+        {/* Bootstrap row wrapper div  */}
+        <div class="row">
+          <CountriesList />
+        </div>
+      </div>
     </div>
   );
 }
